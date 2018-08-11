@@ -1,0 +1,11 @@
+"{{ adjective }} {{ substantive }}": 20
+"the {{ substantive }} of the {{ substantive }}": 10
+"the {{ substantive }} with the {{ adjective }} {{ substantive }}": 10
+"the girl with the {{ adjective }} {{ substantive }}": 10
+"fear of a {{ adjective }} {{ substantive }}": 10
+"no {{ substantive }}, no {{ substantive }}": 10
+"love in the time of {{ substantive }}": 10
+"1000 years of {{ substantive }}": 10
+"the {{ substantive }} and the {{ adjective }} {{ substantive }}": 10
+
+"{{ . }} {{ suffix }}": 10

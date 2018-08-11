@@ -1,0 +1,27 @@
+"{{ ../common }}": 100
+
+"{{ ../weight }}": 10
+"{{ ../color }}": 10
+"{{ ../material }}": 10
+"{{ ../intelligence }}": 10
+
+illegal: 1
+dangerous: 1
+killer: 1
+wicked: 1
+heroic: 1
+bold:  1
+brave: 1
+mighty: 1
+dizzy: 1
+drunken: 1
+lovely: 1
+beautiful: 1
+good: 1
+bad: 1
+terrible: 1
+spikey: 1
+smooth: 1
+
+"{{ ../number }}": 10
+"{{ ../prefix }}": 10
