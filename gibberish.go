@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"unquabain/gibberish/config"
 	"unquabain/gibberish/lexicon"
+	"unquabain/gibberish/server"
 )
 
 func main() {
@@ -13,10 +14,10 @@ func main() {
 		fmt.Errorf("Could not create a new lexicon: %v", err)
 		return
 	}
-	ret, err := lexicon.Evaluate()
+	server := server.NewServer(lexicon)
 	if err != nil {
-		fmt.Errorf("Could not evaluate: %v", err)
+		fmt.Errorf("Could not create the server: %v", err)
 	} else {
-		fmt.Println(ret)
+		server.Serve(8181)
 	}
 }
