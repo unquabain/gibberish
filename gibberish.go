@@ -8,7 +8,7 @@ import (
 
 func main() {
 	config.Init()	
-	lexicon, err := lexicon.NewLexicon(config.TemplateRoot)
+	lexicon, err := lexicon.NewLexicon(".")
 	if err != nil {
 		fmt.Errorf("Could not create a new lexicon: %v", err)
 		return

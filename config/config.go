@@ -1,26 +1,15 @@
 package config
 
 import (
-	"fmt"
-	"flag"
 	"math/rand"
 	"time"
-	"path/filepath"
+	"github.com/gobuffalo/packr"
 )
 
-var TemplateRoot string
-var AbsRoot string
+var Templates packr.Box
 
 func Init () {
-	var err error
-	AbsRoot, err = filepath.Abs("./templates")
-	if err != nil {
-		fmt.Println("Couldn't find template path", err)
-		return
-	}
-
-	flag.StringVar(&TemplateRoot, "template", AbsRoot, "A directory of lexicon files")
-	flag.Parse()
+	Templates = packr.NewBox("../templates")
 
 	rand.Seed(time.Now().UTC().UnixNano())
 }

@@ -2,13 +2,12 @@ package lexicon
 
 import (
 	"fmt"
-	"io/ioutil"
 	"math/rand"
 	"regexp"
 	"bytes"
 	"strings"
-	"path/filepath"
 	"unquabain/gibberish/config"
+	"path/filepath"
 
 	"gopkg.in/yaml.v2"
 )
@@ -21,11 +20,10 @@ type Lexicon struct {
 }
 
 func NewLexicon(path string) (*Lexicon, error) {
-	dat, err := ioutil.ReadFile(filepath.Join(path, "words.yaml"))
+	buff, err := config.Templates.MustBytes(filepath.Join(path, "words.yaml"))
 	if err != nil {
 		return nil, fmt.Errorf("Couldn't read input file: %v", err)
 	}
-	buff := []byte(dat)
 	output := Lexicon{}
 	
 	var list WordList
@@ -49,10 +47,6 @@ func (this Lexicon) Choose() (winner string) {
 
 func (this Lexicon) follow_path(path string) (string, error) {
 	new_path := filepath.Clean(filepath.Join(this.Path, path))
-
-	if !filepath.HasPrefix(new_path, config.TemplateRoot) {
-		return "", fmt.Errorf("Path %s evaluated above template root %s", new_path, config.TemplateRoot)
-	}
 
 	l, err := NewLexicon(new_path)
 	if err != nil {
