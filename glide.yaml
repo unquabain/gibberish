@@ -1,0 +1,6 @@
+package: unquabain/gibberish
+import:
+- package: github.com/gobuffalo/packr
+  version: ^1.13.1
+- package: gopkg.in/yaml.v2
+  version: ^2.2.1

@@ -1,0 +1,10 @@
+hash: c0e7e848d2a77db6d26dd00fd56932250d8a6e84f7c335613fef219c3f813355
+updated: 2018-08-11T17:00:28.62953-07:00
+imports:
+- name: github.com/gobuffalo/packr
+  version: 4399355520ba52518a972ac16c24f6eb8a1610c1
+- name: github.com/pkg/errors
+  version: 816c9085562cd7ee03e7f8188a1cfd942858cded
+- name: gopkg.in/yaml.v2
+  version: 5420a8b6744d3b0345ab293f6fcba19c978f1183
+testImports: []
