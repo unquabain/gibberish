@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"unquabain/gibberish/config"
-	"unquabain/gibberish/lexicon"
-	"unquabain/gibberish/server"
+	"github.com/unquabain/gibberish/config"
+	"github.com/unquabain/gibberish/lexicon"
+	"github.com/unquabain/gibberish/server"
 )
 
 func main() {
@@ -18,6 +18,6 @@ func main() {
 	if err != nil {
 		fmt.Errorf("Could not create the server: %v", err)
 	} else {
-		server.Serve(8181)
+		server.Serve(config.Port)
 	}
 }

@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"bytes"
 	"strings"
-	"unquabain/gibberish/config"
+	"github.com/unquabain/gibberish/config"
 	"path/filepath"
 
 	"gopkg.in/yaml.v2"

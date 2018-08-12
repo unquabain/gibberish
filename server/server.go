@@ -3,8 +3,8 @@ package server
 import (
 	"fmt"
 	"net/http"
-	"unquabain/gibberish/config"
-	"unquabain/gibberish/lexicon"
+	"github.com/unquabain/gibberish/config"
+	"github.com/unquabain/gibberish/lexicon"
 	"encoding/json"
 )
 
@@ -26,6 +26,7 @@ func (this Server) Serve(port int) {
 	http.Handle("/", http.FileServer(config.Web))
 	http.Handle("/api/", this)
 
+	fmt.Printf("Listening on http://localhost:%d\n^C to quit\n", port)
 	http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
 }
 

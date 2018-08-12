@@ -1,0 +1,50 @@
+* {
+  font: 10pt sans-serif;
+}
+
+body
+{
+  width: 600px;
+  margin: auto;
+  padding-top: 60px;
+  background-color: #EEEEEE;
+}
+
+section#header
+{
+  h1 {
+    font-size: 14pt;
+    font-weight: bold;
+    display: inline;
+  }
+  h2 {
+    font-weight: bold;
+    display: inline;
+  }
+  background-color: #888888;
+  color: #EEEEEE;
+  padding: 24px;
+  box-shadow: 0 2px 2px #888888, 0 5px 10px 3px #DDDDDD;
+}
+
+section#body
+{
+  background-color: white;
+  box-shadow: 0 2px 2px #888888, 0 5px 10px 3px #DDDDDD;
+  padding: 14px;
+
+  #results
+  {
+    padding: 12px 0px 12px 0px;
+
+    li
+    {
+      list-style: none;
+      margin-top: 4px;
+      &:before
+      {
+        content: '\21e8\3000';
+      }
+    }
+  }
+}
